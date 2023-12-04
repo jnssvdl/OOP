@@ -51,8 +51,7 @@ public class App {
         for (int i = 0; i < numberOfTasks; i++) {
             tasks[i].execute(startTime);
             String missed = tasks[i].delayed() ? "Yes" : "No";
-            System.out.printf("%-10s%-10d%-10d%-10d%-10s\n",tasks[i].getName(), tasks[i].getStartTime(), tasks[i].getEndTime(), tasks[i].getDeadline(), missed);
-//            System.out.println(tasks[i].getName() + " " + tasks[i].getStartTime() + " " + tasks[i].getEndTime() + " " + tasks[i].getDeadline() + " " + missed);
+            System.out.printf("%-10s%-10d%-10d%-10d%-10s\n", tasks[i].getName(), tasks[i].getStartTime(), tasks[i].getEndTime(), tasks[i].getDeadline(), missed);
             startTime = tasks[i].getEndTime();
         }
     }

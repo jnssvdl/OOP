@@ -10,56 +10,54 @@ package taskmaster;
  */
 public class Task {
     
-    String name;
-    int executionTime;
-    int deadline;
-    int startTime = -1;
+    private String name;
+    private int executionTime = -1;
+    private int deadline;
+    private int startTime = -1;
     
-    Task() {}
-    
-    Task(String name, int executionTime, int deadline) {
+    public Task(String name, int executionTime, int deadline) {
         this.name = name;
         this.executionTime = executionTime;
         this.deadline = deadline;
     }
     
-    void setName(String name) {
+    public void setName(String name) {
         this.name = name;
     }
     
-    String getName() {
+    public String getName() {
         return this.name;
     }
     
-    void setExecutionTime(int time) {
+    public void setExecutionTime(int time) {
         this.executionTime = time;
     }
     
-    int getExecutionTime() {
+    public int getExecutionTime() {
         return this.executionTime;
     }
     
-    void setDeadline(int time) {
+    public void setDeadline(int time) {
         this.deadline = time;
     }
     
-    int getDeadline() {
+    public int getDeadline() {
         return this.deadline;
     }
     
-    void execute(int time) {
+    public void execute(int time) {
         this.startTime = time;
     }
     
-    int getStartTime() {
+    public int getStartTime() {
         return this.startTime;
     }
     
-    int getEndTime() {
-        return this.startTime > -1 ? this.startTime + this.executionTime : -1;
+    public int getEndTime() {
+        return this.startTime + this.executionTime;
     }
     
-    boolean delayed() {
+    public boolean delayed() {
         return this.getEndTime() > this.deadline;
     }
     
