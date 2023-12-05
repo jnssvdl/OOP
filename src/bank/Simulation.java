@@ -33,10 +33,10 @@ public class Simulation {
             }
             System.out.print("Do you want to remove card? [Y]es [N]o: ");
             String remove = in.nextLine();
-            if (remove.equals("Y")) {
-                continue;
-            } else {
+            if (remove.equalsIgnoreCase("Y")) {
                 break;
+            } else {
+                continue;
             }
         }
     }
@@ -63,7 +63,7 @@ public class Simulation {
             }
             System.out.print("Do you want another transaction? [Y]es [No]: ");
             String another = in.nextLine();
-            if (another.equals("Y")) {
+            if (another.equalsIgnoreCase("Y")) {
                 continue;
             } else {
                 break;
