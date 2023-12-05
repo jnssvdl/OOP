@@ -29,7 +29,6 @@ public class Simulation {
                 loggedIn(pin, account);
             } else {
                 System.out.println("Invalid pin. ");
-                continue;
             }
             System.out.print("Do you want to remove card? [Y]es [N]o: ");
             String remove = in.nextLine();
